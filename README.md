@@ -21,9 +21,7 @@ Initially, this project used a gesture classification model trained using Google
 Universal Accessibility: The system works effectively with any person, regardless of skin tone or background environment.
 Improved Gesture Recognition: The game does not rely on perfect hand gestures, making it more user-friendly and accurate across varying conditions.
 
-![RPS Hand Tracking Code](Computer-Vision/Demo/RPS%20Hand%20Tracking.png?raw=true)
-![RPS Hand Tracking Code](Computer-Vision/Demo/RPS%20Hand%20Tracking.png)
-![RPS Hand Tracking Code](/Computer-Vision/Demo/RPS%20Hand%20Tracking.png?raw=true "Optional Title")
+![RPS Hand Tracking Code](/Demo/RPS%20Hand%20Tracking.png?raw=true)
 
 Requirements
 Python 3.x
