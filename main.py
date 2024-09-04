@@ -25,6 +25,10 @@ aiImageStartTime = 0
 # List of possible moves
 moves = ["Rock", "Paper", "Scissors"]
 
+# Create a fullscreen window
+cv2.namedWindow("Background", cv2.WINDOW_NORMAL)
+cv2.setWindowProperty("Background", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+
 # Game Loop
 while True:
     imgBackground = cv2.imread("Resources/Background.png") # Background Image
@@ -103,14 +107,17 @@ while True:
                     startGame = False  # End the game after 3 rounds
                     # Determine the winner
                     if scores[1] > scores[0]:
-                        winner = "Player Wins!"
+                        # cv2 doesnt support \n so each on a line of its own
+                        cv2.putText(imgBackground, "Player", (907, 420), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 4)
+                        cv2.putText(imgBackground, "Wins!", (945, 485), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 4)
                     elif scores[0] > scores[1]:
-                        winner = "AI Wins!"
+                        # cv2 doesnt support \n so each on a line of its own
+                        cv2.putText(imgBackground, "AI", (207, 420), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 4)
+                        cv2.putText(imgBackground, "Wins!", (145, 485), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 4)
                     else:
                         winner = "It's a Draw!"
+                        cv2.putText(imgBackground, winner, (400, 450), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 4)
 
-                    # Display the winner on the background image
-                    cv2.putText(imgBackground, winner, (450, 450), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 4)
                     cv2.imshow("Background", imgBackground)
                     cv2.waitKey(3000)  # Show result for 3 seconds before exiting
                     break  # Exit the game loop

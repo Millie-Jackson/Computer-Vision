@@ -1,0 +1,6 @@
+- Allow player to enter name and use name instead of "Player"
+- Facial recognition to determine name
+- Player vs player
+- Automatically update leaderboard based on facial recognition
+- Implement own hand tracking
+- A UI/menu screen to choose between games/apps
