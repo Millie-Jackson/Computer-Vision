@@ -20,6 +20,8 @@ Initially, this project used a gesture classification model trained using Google
 
 Universal Accessibility: The system works effectively with any person, regardless of skin tone or background environment.
 Improved Gesture Recognition: The game does not rely on perfect hand gestures, making it more user-friendly and accurate across varying conditions.
+![](file:///home/millie/Documents/GitHub/Computer-Vision-Rock-Paper-Scissors/Demo/RPS%20Hand%20Tracking.png)
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 Requirements
 Python 3.x
 OpenCV (cv2)
