@@ -26,7 +26,7 @@ class handDetector():
         Mediapipe drawing utility for drawing hand landmarks and connections.
     """
 
-    def __init__(self, mode=False, maxHands=2, dectectionCon=0.5, trackCon=0.5):
+    def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5):
         """
         Initializes the hand detector object with the given parameters.
 
@@ -43,7 +43,7 @@ class handDetector():
         """
         self.mode = mode
         self.maxHands = maxHands
-        self.detectionCon = dectectionCon
+        self.detectionCon = detectionCon
         self.trackCon = trackCon
         self.results = None
 
@@ -72,16 +72,19 @@ class handDetector():
 
         imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  
         self.results = self.hands.process(imgRGB)
-        #print(results.multi_hand_landmarks)
-        
+        hands = []
+
         # Check for multiple hands
         if self.results.multi_hand_landmarks:
+            hands = self.results.multi_hand_landmarks # Store the landmarks
+
             for handsLms in self.results.multi_hand_landmarks:
                 # Only draw if we ask it too
                 if draw:
                     # Draw the 21 landmarks and connections
                     self.mpDraw.draw_landmarks(img, handsLms, self.mpHands.HAND_CONNECTIONS)
-        return img # Incase we drew on it
+
+        return hands, img # Incase we drew on it
     
     def findPosition(self, img, handNumber=0, draw=True):
         """
@@ -122,6 +125,41 @@ class handDetector():
                     cv2.circle(img, (cx, cy), 5, (255, 0, 255), cv2.FILLED)
     
         return lmList # Even if it is 0
+    
+    def fingersUp(self, hand) -> list:
+        """
+        Determines which fingers are up based on the landmarks of the hand.
+
+        Parameters:
+        -----------
+        hand : multi_hand_landmarks
+            The hand landmarks data from Mediapipe.
+
+        Returns:
+        --------
+        fingers : list
+            A list of 0s and 1s, where 1 means the finger is up, and 0 means it's down.
+            The order of fingers is: Thumb, Index, Middle, Ring, Pinky.
+        """
+
+        fingers = []
+        # Finger tips
+        tips = [4, 8, 12, 16, 20] # Thumb | Index | Middle | Ring | Pinkey
+
+        # Thumb (compare x because it bends horizontally)
+        if hand.landmark[tips[0]].x < hand.landmark[tips[0] - 1].x:
+            fingers.append(1)
+        else:
+            fingers.append(0)
+
+        # Fingers (compare y because they bend vertically)
+        for id in range(1, 5):
+            if hand.landmark[tips[id]].y < hand.landmark[tips[id] - 2].y:
+                fingers.append(1)
+            else:
+                fingers.append(0)
+        
+        return fingers
 
 
 

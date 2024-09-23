@@ -1,8 +1,7 @@
 import cv2
-import cvzone
 import time
 import random
-from cvzone.HandTrackingModule import HandDetector
+from HandTrackingModule import handDetector
 
 
 # Open Webcam
@@ -11,7 +10,7 @@ cap.set(3, 640)
 cap.set(4, 480)
 
 # Track 1 hand
-detector = HandDetector(maxHands = 1)
+detector = handDetector(maxHands = 1)
 
 timer = 0
 turnTimer = False
@@ -28,6 +27,21 @@ moves = ["Rock", "Paper", "Scissors"]
 # Create a fullscreen window
 cv2.namedWindow("Background", cv2.WINDOW_NORMAL)
 cv2.setWindowProperty("Background", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+
+def overlayPNG(background, img, pos=(0, 0)) -> list:
+
+    # Ensure image sizes match
+    y_offset, x_offset = pos
+    y1, y2 = y_offset, y_offset + img.shape[0]
+    x1, x2 = x_offset, x_offset + img.shape[1]
+
+    alpha_img = img[:, :, 3] / 255.0 # Alpha channel
+    alpha_background = 1.0 - alpha_img
+
+    for c in range(0, 3):
+        background[y1:y2, x1:x2, c] = (alpha_img * img[:, :, c] + alpha_background * background[y1:y2, x1:x2, c])
+
+    return background
 
 # Game Loop
 while True:
@@ -56,7 +70,7 @@ while True:
             
                 # Count fingers
                 if hands:
-                    playermove = None
+                    playerMove = None
                     hand = hands[0]
                     fingers = detector.fingersUp(hand)
                     # Sign Detection
@@ -95,7 +109,7 @@ while True:
         if showAIImage:
             currentTime = time.time()
             if currentTime - aiImageStartTime < 2:  # Display the AI image for 3 seconds
-                imgBackground = cvzone.overlayPNG(imgBackground, imgAI, (149, 310))
+                imgBackground = overlayPNG(imgBackground, imgAI, (300, 150))
             else:
                 imgAI = None  # Stop displaying the AI image after 3 seconds
                 showAIImage = False  # Reset the flag
@@ -125,8 +139,8 @@ while True:
     # Put camera in player block
     imgBackground[234:654, 795:1195] = imgCamera
 
-    if turnTimer and showAIImage and imgAI is not None:
-        imgBackground = cvzone.overlayPNG(imgBackground, imgAI, (149, 310))  
+    #if turnTimer and showAIImage and imgAI is not None:
+    #    imgBackground = overlayPNG(imgBackground, imgAI, (149, 310))  
 
     # Display Scores
     cv2.putText(imgBackground, str(scores[0]), (410, 215), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 6)
