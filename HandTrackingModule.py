@@ -114,10 +114,9 @@ class handDetector():
             handsLms = self.results.multi_hand_landmarks[handNumber]
             # Extract each hand
             for id, lm in enumerate(handsLms.landmark): # lm = landmark | id = which landmark
-                #print(id, lm)
                 h, w, c = img.shape # width, height, channel
                 cx, cy = int(lm.x * w), int(lm.y * h) # position of center
-                print(id, cx, cy)
+                #print(id, cx, cy)
                 lmList.append([id, cx, cy])
                 
                 # Draw by default
