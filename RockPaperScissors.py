@@ -2,6 +2,8 @@ import cv2
 import time
 import random
 from HandTrackingModule import handDetector
+from DataAnalysis import analyze_player_patterns, get_smart_ai_move
+
 
 
 # Open Webcam
@@ -12,6 +14,7 @@ cap.set(4, 480)
 # Track 1 hand
 detector = handDetector(maxHands = 1)
 
+# Game variables
 timer = 0
 turnTimer = False
 startGame = False
@@ -20,6 +23,7 @@ imgAI = None
 turn = 0
 showAIImage = False
 aiImageStartTime = 0
+player_move_history = []
 
 # List of possible moves
 moves = ["Rock", "Paper", "Scissors"]
@@ -27,6 +31,8 @@ moves = ["Rock", "Paper", "Scissors"]
 # Create a fullscreen window
 cv2.namedWindow("Background", cv2.WINDOW_NORMAL)
 cv2.setWindowProperty("Background", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+
+
 
 def overlayPNG(background, img, pos=(0, 0)) -> list:
 
@@ -42,6 +48,8 @@ def overlayPNG(background, img, pos=(0, 0)) -> list:
         background[y1:y2, x1:x2, c] = (alpha_img * img[:, :, c] + alpha_background * background[y1:y2, x1:x2, c])
 
     return background
+
+
 
 # Game Loop
 while True:
@@ -81,7 +89,8 @@ while True:
                     if fingers == [0, 1, 1, 0, 0]:
                         playerMove = 'Scissors' 
 
-                    aiMove = random.choice(moves) # Randomly select AI move
+                    player_move_history.append(playerMove)
+                    aiMove = get_smart_ai_move(player_move_history) or random.choice(moves)
                     imgAI = cv2.imread(f'Resources/{aiMove}.png', cv2.IMREAD_UNCHANGED)
 
                     # Check if image was loaded correctly
@@ -119,6 +128,7 @@ while True:
                 # Check if the game should end
                 if turn >= 3:
                     startGame = False  # End the game after 3 rounds
+                    print(analyze_player_patterns(player_move_history))
                     # Determine the winner
                     if scores[1] > scores[0]:
                         # cv2 doesnt support \n so each on a line of its own
@@ -137,10 +147,7 @@ while True:
                     break  # Exit the game loop
                     
     # Put camera in player block
-    imgBackground[234:654, 795:1195] = imgCamera
-
-    #if turnTimer and showAIImage and imgAI is not None:
-    #    imgBackground = overlayPNG(imgBackground, imgAI, (149, 310))  
+    imgBackground[234:654, 795:1195] = imgCamera 
 
     # Display Scores
     cv2.putText(imgBackground, str(scores[0]), (410, 215), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 6)

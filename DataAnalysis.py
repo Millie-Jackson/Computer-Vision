@@ -63,7 +63,7 @@ def dectect_player_move_sequences():
     for transition, count in transitions_counts.most_common():
         print(f"{transition[0]} -> {transition[1]} : {count} times")
 
-def predict_next_move():
+def predict_next_move(player_move_history):
     """Predicts the player's next move based on history"""
 
     if len(player_move_history) < 2:
@@ -84,10 +84,10 @@ def predict_next_move():
     predicted_move = max(possible_next_moves, key=possible_next_moves.get)
     return predicted_move
 
-def get_smart_ai_move():
+def get_smart_ai_move(player_move_history):
     """AI selects the best move based on predicted player move."""
 
-    predicted_player_move = predict_next_move()
+    predicted_player_move = predict_next_move(player_move_history)
 
     # Choose the best counter move
     counter_moves = {
@@ -97,6 +97,29 @@ def get_smart_ai_move():
     }
 
     return counter_moves.get(predicted_player_move, random.choice(moves)) # Default to random move
+
+def analyze_player_patterns(player_move_history):
+    """Analyzes player's decision patterns over time."""
+
+    if not player_move_history:
+        return "No moves recorded."
+    
+    move_counts = Counter(player_move_history)
+    most_common = move_counts.most_common(1)
+    transition_counts = Counter(zip(player_move_history[:-1], player_move_history[1:]))
+    most_common_transition = transition_counts.most_common(1)
+
+    analysis_results = []
+    analysis_results.append("\n Player Move Analysis:")
+    for move, count in move_counts.items():
+        analysis_results.append(f"{move}: {count} times")
+
+    if most_common:
+        analysis_results.append(f"Most frequently played move: {most_common[0][0]} ({most_common[0][1]} times)")
+    if most_common_transition:
+        analysis_results.append(f"Most common move sequence: {most_common_transition[0][0][0]} -> {most_common_transition[0][0][1]} ({most_common_transition[0][1]} times)")
+
+    return "\n".join(analysis_results)
 
 
 
@@ -113,7 +136,7 @@ analyze_move_frequencies()
 dectect_player_move_sequences()
 
 # Predict the next move based on history
-predicted_move = predict_next_move()
+predicted_move = predict_next_move(player_move_history)
 print(f"\n AI Predicts Player Will Choose: {predicted_move}")
-ai_smart_move = get_smart_ai_move()
+ai_smart_move = get_smart_ai_move(player_move_history)
 print(f"AI Chooses: {ai_smart_move} (to counter predicted move)")
