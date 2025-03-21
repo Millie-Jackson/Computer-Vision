@@ -1,6 +1,8 @@
 
 import random
-import time
+import csv
+import os
+import pandas as pd
 from collections import Counter
 
 # Initialize move history storage
@@ -10,21 +12,7 @@ ai_move_history = []
 # Possible moves
 moves = ["Rock", "Paper", "Scissors"]
 
-def get_player_move():
-    """Simulates player input."""
 
-    move = random.choice(moves) # Simulate player move
-    player_move_history.append(move) # Store move
-
-    return move
-
-def get_ai_move():
-    """Chooses AI move."""
-
-    move = random.choice(moves)
-    ai_move_history.append(move)
-
-    return moves
 
 def determine_winner(player, ai):
     """Decides the winner based on game rules."""
@@ -52,11 +40,7 @@ def analyze_move_frequencies():
 def dectect_player_move_sequences():
     """Identifies common move transitions"""
 
-    transitions = []
-    for i in range(len(player_move_history) - 1):
-        prev_move = player_move_history[i]
-        next_move = player_move_history[i+1]
-        transitions.append((prev_move, next_move))
+    transitions = [(player_move_history[i], player_move_history[i+1]) for i in range(len(player_move_history) - 1)]
     
     transitions_counts = Counter(transitions)
     print("\n Common Player Move Sequences:")
@@ -121,16 +105,56 @@ def analyze_player_patterns(player_move_history):
 
     return "\n".join(analysis_results)
 
+def save_moves_to_csv(player_moves, ai_moves, filename="game_moves.csv"):
+    """Appends player and AI moves to a CSV file for later analysis"""
+
+    # Check if file exists
+    file_exists = os.path.isfile(filename)
+
+    with open(filename, mode="a", newline="") as file:
+        writer = csv.writer(file)
+
+        # Write headers only if it is a new file
+        if not file_exists:
+            writer.writerow(["Round", "Player Move", "AI Move"])
+
+        for i, (player, ai) in enumerate(zip(player_moves, ai_moves), start=1):
+            writer.writerow([i, player, ai])
+
+    print(f"\n Moves appended to {filename} successfully!")
+
+def display_moves_as_dataframe(player_moves, ai_moves):
+    """Displays game moves as a Pandas DataFrame"""
+
+    df = pd.DataFrame({"Round": list(range(1, len(player_moves) + 1)),
+                        "Player Move": player_moves,
+                        "AI Move": ai_moves})
+    
+    print("\n Game Move History:\n")
+    print(df)
+
+    return df # Return for further analysis
+
+def check_dataset_size(filename="game_moves.csv"):
+    """Loads the csv and displays how many rounds are recorded"""
+
+    # Check if the file exists
+    if not os.path.isfile(filename):
+        print("\n No dataset found.")
+        return
+    
+    # Check if the file is empty
+    if os.stat(filename).st_size == 0:
+        print("\n The data set is empty.")
+        return
+
+    try:
+        df = pd.read_csv(filename)
+        print(f"\n Total Rounds Recorded: {len(df)}")
+    except pd.errors.EmptyDataError:
+        print("\n The Dataset exists but is empty.")
 
 
-# Play multiple rounds
-for round_number in range(10): # Simulate 10 rounds
-    time.sleep(1)
-    player_move = get_player_move()
-    ai_move = get_ai_move()
-    result = determine_winner(player_move, ai_move)
-
-    print(f"Round {round_number+1}: Player chose {player_move}, AI chose {ai_move} -> {result}")
 
 analyze_move_frequencies()
 dectect_player_move_sequences()
@@ -140,3 +164,5 @@ predicted_move = predict_next_move(player_move_history)
 print(f"\n AI Predicts Player Will Choose: {predicted_move}")
 ai_smart_move = get_smart_ai_move(player_move_history)
 print(f"AI Chooses: {ai_smart_move} (to counter predicted move)")
+
+print (f"Dataset size: ", player_move_history)

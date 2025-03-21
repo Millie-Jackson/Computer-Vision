@@ -1,0 +1,16 @@
+Round,Player Move,AI Move
+1,Paper,Rock
+2,,Rock
+3,Scissors,Paper
+1,,Rock
+2,Paper,Scissors
+3,Paper,Scissors
+1,Scissors,Paper
+2,Paper,Paper
+3,Scissors,Scissors
+1,Rock,Paper
+2,Scissors,Rock
+3,Scissors,Rock
+1,Rock,Paper
+2,Scissors,Rock
+3,Rock,Rock

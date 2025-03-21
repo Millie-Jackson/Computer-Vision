@@ -2,7 +2,7 @@ import cv2
 import time
 import random
 from HandTrackingModule import handDetector
-from DataAnalysis import analyze_player_patterns, get_smart_ai_move
+from DataAnalysis import analyze_player_patterns, get_smart_ai_move, save_moves_to_csv, display_moves_as_dataframe, check_dataset_size
 
 
 
@@ -24,6 +24,7 @@ turn = 0
 showAIImage = False
 aiImageStartTime = 0
 player_move_history = []
+ai_move_history = []
 
 # List of possible moves
 moves = ["Rock", "Paper", "Scissors"]
@@ -91,6 +92,7 @@ while True:
 
                     player_move_history.append(playerMove)
                     aiMove = get_smart_ai_move(player_move_history) or random.choice(moves)
+                    ai_move_history.append(aiMove)
                     imgAI = cv2.imread(f'Resources/{aiMove}.png', cv2.IMREAD_UNCHANGED)
 
                     # Check if image was loaded correctly
@@ -132,8 +134,8 @@ while True:
                     # Determine the winner
                     if scores[1] > scores[0]:
                         # cv2 doesnt support \n so each on a line of its own
-                        cv2.putText(imgBackground, "Player", (907, 420), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 4)
-                        cv2.putText(imgBackground, "Wins!", (945, 485), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 4)
+                        cv2.putText(imgBackground, "Player", (807, 420), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 4)
+                        cv2.putText(imgBackground, "Wins!", (845, 485), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 4)
                     elif scores[0] > scores[1]:
                         # cv2 doesnt support \n so each on a line of its own
                         cv2.putText(imgBackground, "AI", (207, 420), cv2.FONT_HERSHEY_PLAIN, 6, (0, 255, 0), 4)
@@ -164,3 +166,8 @@ while True:
         turn = 0 # Reset for next game
         scores = [0, 0] # Resent for next game
         showAIImage = False # Reset for next round
+
+# Save moves to dataset
+df = display_moves_as_dataframe(player_move_history, ai_move_history)
+save_moves_to_csv(player_move_history, ai_move_history)
+check_dataset_size()
