@@ -105,7 +105,7 @@ def analyze_player_patterns(player_move_history):
 
     return "\n".join(analysis_results)
 
-def save_moves_to_csv(player_moves, ai_moves, filename="game_moves.csv"):
+def save_moves_to_csv(player_moves, ai_moves, results, filename="game_moves.csv"):
     """Appends player and AI moves to a CSV file for later analysis"""
 
     # Check if file exists
@@ -116,10 +116,10 @@ def save_moves_to_csv(player_moves, ai_moves, filename="game_moves.csv"):
 
         # Write headers only if it is a new file
         if not file_exists:
-            writer.writerow(["Round", "Player Move", "AI Move"])
+            writer.writerow(["Round", "Player Move", "AI Move", "Result"])
 
-        for i, (player, ai) in enumerate(zip(player_moves, ai_moves), start=1):
-            writer.writerow([i, player, ai])
+        for i, (player, ai, result) in enumerate(zip(player_moves, ai_moves, results), start=1):
+            writer.writerow([i, player, ai, result])
 
     print(f"\n Moves appended to {filename} successfully!")
 
@@ -153,6 +153,15 @@ def check_dataset_size(filename="game_moves.csv"):
         print(f"\n Total Rounds Recorded: {len(df)}")
     except pd.errors.EmptyDataError:
         print("\n The Dataset exists but is empty.")
+
+def calculate_ai_win_rate(results):
+    """Calculates win rate"""
+
+    total = len(results)
+    counts = Counter(results)
+    ai_wins = counts.get("AI Wins", 0)
+    win_rate = (ai_wins /  total) * 100 if total > 0 else 0
+    print(f"\n AI Win Rate: {win_rate:.1f}% ({ai_wins}/{total} rounds)")
 
 
 

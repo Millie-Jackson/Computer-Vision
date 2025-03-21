@@ -2,7 +2,7 @@ import cv2
 import time
 import random
 from HandTrackingModule import handDetector
-from DataAnalysis import analyze_player_patterns, get_smart_ai_move, save_moves_to_csv, display_moves_as_dataframe, check_dataset_size
+from DataAnalysis import analyze_player_patterns, get_smart_ai_move, save_moves_to_csv, display_moves_as_dataframe, check_dataset_size, calculate_ai_win_rate
 
 
 
@@ -25,6 +25,7 @@ showAIImage = False
 aiImageStartTime = 0
 player_move_history = []
 ai_move_history = []
+round_results = [] # 'AI Wins', 'Player Wins', 'Draw'
 
 # List of possible moves
 moves = ["Rock", "Paper", "Scissors"]
@@ -107,14 +108,22 @@ while True:
                         (playerMove == 'Paper' and aiMove == 'Rock') or \
                         (playerMove == 'Scissors' and aiMove == 'Paper'):
                         scores[1] += 1
+                        round_results.append("Player Wins")
 
                     # AI Wins
                     if (playerMove == 'Scissors' and aiMove == 'Rock') or \
                         (playerMove == 'Rock' and aiMove == 'Paper') or \
                         (playerMove == 'Paper' and aiMove == 'Scissors'):
                         scores[0] += 1
+                        round_results.append("AI Wins")
+                    
+                    # Record a Draw
+                    if playerMove == aiMove:
+                        round_results.append("Draw")
 
                     turn += 1
+
+
 
         # Display the AI image for a specific time
         if showAIImage:
@@ -169,5 +178,6 @@ while True:
 
 # Save moves to dataset
 df = display_moves_as_dataframe(player_move_history, ai_move_history)
-save_moves_to_csv(player_move_history, ai_move_history)
+save_moves_to_csv(player_move_history, ai_move_history, round_results)
 check_dataset_size()
+calculate_ai_win_rate(round_results)
