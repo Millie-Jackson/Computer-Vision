@@ -9,6 +9,8 @@ from collections import Counter
 from itertools import groupby
 from matplotlib.backends.backend_pdf import PdfPages
 import os
+from datetime import datetime
+import textwrap
 
 
 
@@ -42,6 +44,19 @@ def get_streaks(results):
     """Streak analysis"""
 
     return [(key, sum(1 for _ in group)) for key, group in groupby(results)]
+
+def ensure_reports_folder():
+    """Ensures reports are placed into a folder"""
+
+    if not os.path.exists("reports"):
+        os.makedirs("reports")
+
+def cleanup_old_charts():
+    """Removes out of date charts"""
+
+    for fname in ["outcome.png", "winrate.png", "start_end.png"]:
+        if os.path.exists(fname):
+            os.remove(fname)
 
 def plot_outcome_distribution(df, save_path):
     """Plot outcome distributions"""
@@ -137,23 +152,24 @@ def generate_pdf_report(df, filename="RPS_Report.pdf"):
         summary = """
 Rock-Paper-scissors Game Report
 
-Total Rounds: {}
+Total Rounds: {len(df)}
 
 Outcome Breakdown:
-{}
+{outcomes.to_string()}
 
 Player Win Rate Per Move:
-{}
+{win_rates.to_string()}
 
 Win/Loss/Draw Streaks:
-{}
+{streaks}
 
 Notes:
-- The charts summarize outcome distribution, player effectiveness by move, and consistency across the game.
+- The charts summarize outcome distribution, player effectiveness by move and consistency across the game.
 - Win streacks indicate momentum, while start/end comparison reveals pressure performance.
-        """.format(len(df), outcomes.to_string(), win_rates.to_string(), streaks)
+        """
 
-        ax.text(0.05, 0.95, summary, va='top', fontsize=10, family='monospace')
+        wrapped = textwrap.fill(summary, width=90, replace_whitespace=False)
+        ax.text(0.05, 0.95, wrapped, va='top', fontsize=10, family='monospace')
         pdf.savefig(fig)
         plt.close()
     
@@ -192,6 +208,13 @@ def generate_html_report(df, filename="RPS_Report.html"):
 
 if __name__ == "__main__":
     
+    ensure_reports_folder()
+    cleanup_old_charts()
     df = load_data()
+
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+    pdf_filename = f"reports/rps_report_{timestamp}.pdf"
+    html_filename = f"report/rps_report_{timestamp}.html"
+
     generate_pdf_report(df)
     generate_html_report(df)

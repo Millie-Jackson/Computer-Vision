@@ -3,7 +3,7 @@
 import cv2
 import time
 import os
-import HandTrackingModule as htm
+import modules.HandTrackingModule as htm
 
 
 

@@ -1,4 +1,4 @@
 Round,Player Move,AI Move,Result
-1,Scissors,Rock,AI Wins
-2,Paper,Paper,Draw
-3,Scissors,Scissors,Draw
+1,Scissors,Scissors,Draw
+2,Rock,Paper,AI Wins
+3,Paper,Scissors,AI Wins

@@ -1,8 +1,11 @@
 import cv2
 import time
 import random
-from HandTrackingModule import handDetector
-from DataAnalysis import analyze_player_patterns, get_smart_ai_move, save_moves_to_csv, display_moves_as_dataframe, check_dataset_size, calculate_ai_win_rate
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from modules.HandTrackingModule import handDetector
+from scripts.DataAnalysis import analyze_player_patterns, get_smart_ai_move, save_moves_to_csv, display_moves_as_dataframe, check_dataset_size, calculate_ai_win_rate
 
 
 
@@ -55,7 +58,7 @@ def overlayPNG(background, img, pos=(0, 0)) -> list:
 
 # Game Loop
 while True:
-    imgBackground = cv2.imread("Resources/Background.png") # Background Image
+    imgBackground = cv2.imread("resources/Background.png") # Background Image
     success, img = cap.read()
 
     # Scale down camera
@@ -94,14 +97,14 @@ while True:
                     player_move_history.append(playerMove)
                     aiMove = get_smart_ai_move(player_move_history) or random.choice(moves)
                     ai_move_history.append(aiMove)
-                    imgAI = cv2.imread(f'Resources/{aiMove}.png', cv2.IMREAD_UNCHANGED)
+                    imgAI = cv2.imread(f'resources/{aiMove}.png', cv2.IMREAD_UNCHANGED)
 
                     # Check if image was loaded correctly
                     if imgAI is not None: 
                         showAIImage = True
                         aiImageStartTime = time.time() # Record start time of display
                     else:
-                        print(f"Error: Image Resources/{aiMove}.png could not be loaded")
+                        print(f"Error: Image resources/{aiMove}.png could not be loaded")
 
                     # Play Wins
                     if (playerMove == 'Rock' and aiMove == 'Scissors') or \
