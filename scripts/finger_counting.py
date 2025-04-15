@@ -2,7 +2,9 @@
 
 import cv2
 import time
+import sys
 import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import modules.HandTrackingModule as htm
 
 
@@ -10,7 +12,7 @@ import modules.HandTrackingModule as htm
 # Start video capture
 cap = cv2.VideoCapture(0)
 
-folderPath = "Resources/FingerImages"
+folderPath = "resources/FingerImages"
 imgList = os.listdir(folderPath)
 
 overlayList = []

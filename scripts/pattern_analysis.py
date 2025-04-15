@@ -6,7 +6,7 @@ from itertools import groupby
 
 
 
-def load_game_data(filename="game_moves.csv"):
+def load_game_data(filename="data/game_moves.csv"):
     """Load the dataset"""
 
     try:

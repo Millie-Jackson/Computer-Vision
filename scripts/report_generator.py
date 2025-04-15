@@ -16,7 +16,7 @@ import textwrap
 
 sns.set(style="whitegrid")
 
-def load_data(filename="game_moves.csv"):
+def load_data(filename="data/game_moves.csv"):
     """Loads data"""
 
     if not os.path.exists(filename):
@@ -109,14 +109,14 @@ def plot_start_vs_end(df, save_path):
 
 
 
-def generate_pdf_report(df, filename="RPS_Report.pdf"):
+def generate_pdf_report(df, filename="reports/rps_report.pdf"):
     """Generates pdf report"""
 
     with PdfPages(filename) as pdf:
 
         # 1. Outcomes
-        plot_outcome_distribution(df, "outcome.png")
-        img = plt.imread("outcome.png")
+        plot_outcome_distribution(df, "reports/outcome.png")
+        img = plt.imread("reports/outcome.png")
         fig, ax = plt.subplots()
         ax.imshow(img)
         ax.axis('off')
@@ -124,8 +124,8 @@ def generate_pdf_report(df, filename="RPS_Report.pdf"):
         plt.close(fig)
 
         # 2. Win % by move
-        plot_winrate_by_move(df, "winrate.png")
-        img = plt.imread("winrate.png")
+        plot_winrate_by_move(df, "reports/winrate.png")
+        img = plt.imread("reports/winrate.png")
         fig, ax = plt.subplots()
         ax.imshow(img)
         ax.axis('off')
@@ -133,8 +133,8 @@ def generate_pdf_report(df, filename="RPS_Report.pdf"):
         plt.close(fig)
 
         # 3. Start VS End
-        plot_start_vs_end(df, "start_end.png")
-        img = plt.imread("start_end.png")
+        plot_start_vs_end(df, "reports/start_end.png")
+        img = plt.imread("reports/start_end.png")
         fig, ax = plt.subplots()
         ax.imshow(img)
         ax.axis('off')
@@ -175,12 +175,12 @@ Notes:
     
     print(f"PDF report saved as {filename}")
 
-def generate_html_report(df, filename="RPS_Report.html"):
+def generate_html_report(df, filename="reports/rps_report.html"):
     """Generate html report"""
 
-    outcome_img = "outcome.png"
-    winrate_img = "winrate.png"
-    startend_img = "start_end.png"
+    outcome_img = "reports/outcome.png"
+    winrate_img = "reports/winrate.png"
+    startend_img = "reports/start_end.png"
 
     plot_outcome_distribution(df, outcome_img)
     plot_winrate_by_move(df, winrate_img)
@@ -214,7 +214,7 @@ if __name__ == "__main__":
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
     pdf_filename = f"reports/rps_report_{timestamp}.pdf"
-    html_filename = f"report/rps_report_{timestamp}.html"
+    html_filename = f"reports/rps_report_{timestamp}.html"
 
     generate_pdf_report(df)
     generate_html_report(df)
