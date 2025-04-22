@@ -1,4 +1,4 @@
-# ReportGenerator.py
+# scripts/report_generator.py
 
 
 

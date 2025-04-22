@@ -1,4 +1,6 @@
-# PatternAnalysis.py
+# scripts/pattern_analysis.py
+
+
 
 import pandas as pd
 from collections import Counter
