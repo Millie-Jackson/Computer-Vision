@@ -67,13 +67,13 @@ for i in range(total_rounds):
 # Create DataFrame
 df_simulated = pd.DataFrame({
     "Round": round_numbers,
-    "Player move": player_moves,
+    "Player Move": player_moves,
     "AI Move": ai_moves,
     "Result": results
 })
 
 # Save to CSV
-df_simulated.to_csv("data/simulated_games_moves_for_testing.csv", index=False)
+df_simulated.to_csv("data/simulated_game_moves_for_testing.csv", index=False)
 print("Simulated test dataset saved")
 
 

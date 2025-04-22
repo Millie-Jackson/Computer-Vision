@@ -1,4 +1,4 @@
-# scripts/report_generator.py
+# report_generator.py
 
 
 
@@ -16,7 +16,11 @@ import textwrap
 
 sns.set(style="whitegrid")
 
-def load_data(filename="data/game_moves.csv"):
+# Test data or normal data
+#data_file = "data/game_moves.csv"
+data_file = "data/simulated_game_moves_for_testing.csv"
+
+def load_data(filename=data_file):
     """Loads data"""
 
     if not os.path.exists(filename):
@@ -149,8 +153,8 @@ def generate_pdf_report(df, filename="reports/rps_report.pdf"):
         win_rates = win_rate_per_move(df)
         streaks = get_streaks(df['Result'].tolist())
 
-        summary = """
-Rock-Paper-scissors Game Report
+        summary = f"""
+Rock-Paper-Scissors Game Report
 
 Total Rounds: {len(df)}
 

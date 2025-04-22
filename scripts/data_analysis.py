@@ -15,6 +15,9 @@ ai_move_history = []
 # Possible moves
 moves = ["Rock", "Paper", "Scissors"]
 
+# Test data or normal data
+#data_file = "data/game_moves.csv"
+data_file = "data/simulated_game_moves_for_testing.csv"
 
 
 def determine_winner(player, ai):
@@ -108,7 +111,7 @@ def analyze_player_patterns(player_move_history):
 
     return "\n".join(analysis_results)
 
-def save_moves_to_csv(player_moves, ai_moves, results, filename="data/game_moves.csv"):
+def save_moves_to_csv(player_moves, ai_moves, results, filename=data_file):
     """Appends player and AI moves to a CSV file for later analysis"""
 
     # Check if file exists
@@ -140,7 +143,7 @@ def display_moves_as_dataframe(player_moves, ai_moves):
 
     return df # Return for further analysis
 
-def check_dataset_size(filename="data/game_moves.csv"):
+def check_dataset_size(filename=data_file):
     """Loads the csv and displays how many rounds are recorded"""
 
     # Check if the file exists
