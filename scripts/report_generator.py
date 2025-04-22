@@ -149,31 +149,50 @@ def generate_pdf_report(df, filename="reports/rps_report.pdf"):
         fig, ax = plt.subplots(figsize=(8.5, 11))
         ax.axis('off')
 
+        # Prepare report content
         outcomes = get_outcome_stats(df)
         win_rates = win_rate_per_move(df)
         streaks = get_streaks(df['Result'].tolist())
+        formatted_streaks = "\n".join([f"{label:<12} : {count}" for label, count in streaks])
+        formated_win_rates = win_rates.rename_axis(None)
 
+        # Build summar string
         summary = f"""
-Rock-Paper-Scissors Game Report
+===========================
+ Rock-Paper-Scissors Report
+===========================
 
 Total Rounds: {len(df)}
 
-Outcome Breakdown:
-{outcomes.to_string()}
+---------------------------
+ Outcome Breakdown
+---------------------------
+{outcomes.to_string(index=True)}
 
-Player Win Rate Per Move:
-{win_rates.to_string()}
+---------------------------
+ Player Win Rate Per Move
+---------------------------
+{win_rates.to_string(index=True)}
 
-Win/Loss/Draw Streaks:
-{streaks}
+---------------------------
+ Win/Loss/Draw Streaks
+---------------------------
+{formatted_streaks}
 
-Notes:
+---------------------------
+ Notes
+---------------------------
 - The charts summarize outcome distribution, player effectiveness by move and consistency across the game.
 - Win streacks indicate momentum, while start/end comparison reveals pressure performance.
-        """
+"""
 
-        wrapped = textwrap.fill(summary, width=90, replace_whitespace=False)
-        ax.text(0.05, 0.95, wrapped, va='top', fontsize=10, family='monospace')
+        # Display summary on PDF page
+        ax.text(
+            0.05, 1.0, summary,
+            va='top', ha='left',
+            fontsize=9, family='monospace',
+            wrap=True
+        )
         pdf.savefig(fig)
         plt.close()
     
