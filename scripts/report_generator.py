@@ -119,6 +119,8 @@ def plot_start_vs_end(df, save_path):
 
 def generate_pdf_report(df, filename="reports/rps_report.pdf"):
     """Generates pdf report"""
+    from statsmodels.stats.proportion import proportion_confint
+    import textwrap
 
     with PdfPages(filename) as pdf:
 
@@ -157,10 +159,9 @@ def generate_pdf_report(df, filename="reports/rps_report.pdf"):
         outcomes = get_outcome_stats(df)
         win_rates = win_rate_per_move(df)
         streaks = get_streaks(df['Result'].tolist())
-        formatted_streaks = "\n".join([f"{label:<12} : {count}" for label, count in streaks])
         formated_win_rates = win_rates.rename_axis(None)
 
-        # Build summar string
+        # Build summary string
         summary = f"""
 ===========================
  Rock-Paper-Scissors Report
@@ -179,23 +180,18 @@ Total Rounds: {len(df)}
 {win_rates.to_string(index=True)}
 
 ---------------------------
- Win/Loss/Draw Streaks
----------------------------
-{formatted_streaks}
-
----------------------------
  Notes
 ---------------------------
-- The charts summarize outcome distribution, player effectiveness by move and consistency across the game.
+- The charts summarize outcome distribution, player effectiveness by move and consistency 
+  across the game.
 - Win streacks indicate momentum, while start/end comparison reveals pressure performance.
 """
         # Auto-analysis
         ai_wins = outcomes.get("AI Wins", 0)
         player_wins = outcomes.get("Player Wins", 0)
-        win_diff = abs(ai_wins - player_wins) # Closeness threshold (less that 5% difference)
-        margin = 0.05 * len(df) # 5% of total rounds
+        win_diff = abs(ai_wins - player_wins)
+        margin = 0.05 * len(df)
 
-        # Confidence interval
         player_rate = player_wins / len(df)
         lower, upper = proportion_confint(count=player_wins, nobs=len(df), alpha=0.05, method="wilson")
 
@@ -205,11 +201,10 @@ Total Rounds: {len(df)}
                 f"{player_wins} times—a small difference of {win_diff} wins, too close to draw definitive conclusions."
             )
         elif player_wins > ai_wins:
-            outcome_summary = f"The AI exhibited a dominant performance with {ai_wins} wins, compared to only {player_wins} player victories."
-        else:
             outcome_summary = f"The player outperformed the AI with {player_wins} wins, versus {ai_wins} wins."
+        else:
+            outcome_summary = f"The AI exhibited a dominant performance with {ai_wins} wins, \n compared to only {player_wins} player victories."
 
-        # Build conclusions string
         conclusion = f"""
 ---------------------------
  Conclusion
@@ -224,27 +219,41 @@ Player win rates per move were:
 Estimated player win rate: {player_rate:.2%}
 95% Confidence Interval: ({lower:.2%} - {upper:.2%})
 
-The streak analysis revealed patterns in game flow, highlighting consistent runs of {('AI Wins' if ai_wins > player_wins else 'Player Wins')} and occasional disruptions.
+The streak analysis revealed patterns in game flow, highlighting consistent runs of \n {('AI Wins' if ai_wins > player_wins else 'Player Wins')} and occasional disruptions.
 This suggests that {('the AI' if ai_wins > player_wins else 'the player')} maintained greater strategic momentum throughout the game.
 
-Future experiments could explore more adaptive stratergies or varied decision models to challenge the observed trends and test robustness further.
-
+Future experiments could explore more adaptive strategies or varied decision models to \n challenge the observed trends and test robustness further.
 """
 
-        # Combine and format
+        # Combine and wrap summary and conclusion
         full_report = summary + conclusion
-        wrapped = textwrap.fill(full_report, width=90, replace_whitespace=False)
-
-        # Display summary on PDF page
         ax.text(
-            0.05, 1.0, wrapped,
+            0.05, 1.0, full_report,
             va='top', ha='left',
             fontsize=9, family='monospace',
-            wrap=True
+            wrap=False  # Disables forced wrapping
         )
         pdf.savefig(fig)
         plt.close()
-        
+
+        # Add streaks separately and paginated
+        streak_lines = [f"{label:<12} : {count}" for label, count in streaks]
+        lines_per_page = 50
+        streak_pages = [streak_lines[i:i + lines_per_page] for i in range(0, len(streak_lines), lines_per_page)]
+
+        for i, page in enumerate(streak_pages):
+            fig, ax = plt.subplots(figsize=(8.5, 11))
+            ax.axis('off')
+            header = f"""
+---------------------------
+ Win/Loss/Draw Streaks (Page {i+1})
+---------------------------
+"""
+            page_text = header + "\n".join(page)
+            ax.text(0.05, 1.0, page_text, va='top', ha='left', fontsize=9, family='monospace')
+            pdf.savefig(fig)
+            plt.close()
+
     print(f"PDF report saved as {filename}")
 
 def generate_html_report(df, filename="reports/rps_report.html"):
