@@ -2,6 +2,10 @@
 
 
 
+from statsmodels.stats.proportion import proportion_confint
+
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -185,17 +189,62 @@ Total Rounds: {len(df)}
 - The charts summarize outcome distribution, player effectiveness by move and consistency across the game.
 - Win streacks indicate momentum, while start/end comparison reveals pressure performance.
 """
+        # Auto-analysis
+        ai_wins = outcomes.get("AI Wins", 0)
+        player_wins = outcomes.get("Player Wins", 0)
+        win_diff = abs(ai_wins - player_wins) # Closeness threshold (less that 5% difference)
+        margin = 0.05 * len(df) # 5% of total rounds
+
+        # Confidence interval
+        player_rate = player_wins / len(df)
+        lower, upper = proportion_confint(count=player_wins, nobs=len(df), alpha=0.05, method="wilson")
+
+        if win_diff <= margin:
+            outcome_summary = (
+                f"The simulation showed no clear winner. The AI won {ai_wins} times and the player "
+                f"{player_wins} times—a small difference of {win_diff} wins, too close to draw definitive conclusions."
+            )
+        elif player_wins > ai_wins:
+            outcome_summary = f"The AI exhibited a dominant performance with {ai_wins} wins, compared to only {player_wins} player victories."
+        else:
+            outcome_summary = f"The player outperformed the AI with {player_wins} wins, versus {ai_wins} wins."
+
+        # Build conclusions string
+        conclusion = f"""
+---------------------------
+ Conclusion
+---------------------------
+In this simulation of {len(df)} rounds,  {outcome_summary}
+
+Player win rates per move were:
+- Paper: {win_rates.get('Paper', 0):.1f}%
+- Rock: {win_rates.get('Rock', 0):.1f}%
+- Scissors: {win_rates.get('Scissors', 0):.1f}%
+
+Estimated player win rate: {player_rate:.2%}
+95% Confidence Interval: ({lower:.2%} - {upper:.2%})
+
+The streak analysis revealed patterns in game flow, highlighting consistent runs of {('AI Wins' if ai_wins > player_wins else 'Player Wins')} and occasional disruptions.
+This suggests that {('the AI' if ai_wins > player_wins else 'the player')} maintained greater strategic momentum throughout the game.
+
+Future experiments could explore more adaptive stratergies or varied decision models to challenge the observed trends and test robustness further.
+
+"""
+
+        # Combine and format
+        full_report = summary + conclusion
+        wrapped = textwrap.fill(full_report, width=90, replace_whitespace=False)
 
         # Display summary on PDF page
         ax.text(
-            0.05, 1.0, summary,
+            0.05, 1.0, wrapped,
             va='top', ha='left',
             fontsize=9, family='monospace',
             wrap=True
         )
         pdf.savefig(fig)
         plt.close()
-    
+        
     print(f"PDF report saved as {filename}")
 
 def generate_html_report(df, filename="reports/rps_report.html"):
