@@ -1,0 +1,532 @@
+2025-05-02 11:59:56,253 - INFO - Loaded image: 7.jpg, Shape: (640, 640, 3)
+2025-05-02 11:59:56,258 - INFO - Loaded image: 0.jpg, Shape: (640, 640, 3)
+2025-05-02 11:59:56,266 - INFO - Loaded image: 6.jpg, Shape: (640, 640, 3)
+2025-05-02 11:59:56,272 - INFO - Loaded image: 9.jpg, Shape: (640, 640, 3)
+2025-05-02 11:59:56,276 - INFO - Loaded image: 5.jpg, Shape: (640, 640, 3)
+2025-05-02 11:59:56,281 - INFO - Loaded image: 8.jpg, Shape: (640, 640, 3)
+2025-05-02 11:59:56,285 - INFO - Loaded image: 4.jpg, Shape: (640, 640, 3)
+2025-05-02 11:59:56,289 - INFO - Loaded image: 3.jpg, Shape: (640, 640, 3)
+2025-05-02 11:59:56,293 - INFO - Loaded image: 2.jpg, Shape: (640, 640, 3)
+2025-05-02 11:59:56,296 - INFO - Loaded image: 1.jpg, Shape: (640, 640, 3)
+2025-05-02 11:59:56,296 - INFO - Total overlays loaded: 10
+2025-05-02 11:59:56,635 - INFO - Total fingers: 0
+2025-05-02 11:59:56,635 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:56,893 - INFO - Total fingers: 0
+2025-05-02 11:59:56,894 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:56,945 - INFO - Total fingers: 0
+2025-05-02 11:59:56,945 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:56,980 - INFO - Total fingers: 0
+2025-05-02 11:59:56,981 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,021 - INFO - Total fingers: 0
+2025-05-02 11:59:57,021 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,060 - INFO - Total fingers: 0
+2025-05-02 11:59:57,061 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,096 - INFO - Total fingers: 0
+2025-05-02 11:59:57,097 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,136 - INFO - Total fingers: 0
+2025-05-02 11:59:57,136 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,191 - INFO - Total fingers: 0
+2025-05-02 11:59:57,192 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,252 - INFO - Total fingers: 0
+2025-05-02 11:59:57,253 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,302 - INFO - Total fingers: 0
+2025-05-02 11:59:57,303 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,344 - INFO - Total fingers: 0
+2025-05-02 11:59:57,345 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,392 - INFO - Total fingers: 0
+2025-05-02 11:59:57,392 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,443 - INFO - Total fingers: 0
+2025-05-02 11:59:57,444 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,499 - INFO - Total fingers: 0
+2025-05-02 11:59:57,500 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,549 - INFO - Total fingers: 0
+2025-05-02 11:59:57,549 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,585 - INFO - Total fingers: 0
+2025-05-02 11:59:57,586 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,660 - INFO - Total fingers: 0
+2025-05-02 11:59:57,660 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,701 - INFO - Total fingers: 0
+2025-05-02 11:59:57,701 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,739 - INFO - Total fingers: 0
+2025-05-02 11:59:57,740 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,775 - INFO - Total fingers: 0
+2025-05-02 11:59:57,776 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,844 - INFO - Total fingers: 0
+2025-05-02 11:59:57,844 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,889 - INFO - Total fingers: 0
+2025-05-02 11:59:57,890 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,935 - INFO - Total fingers: 0
+2025-05-02 11:59:57,936 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:57,978 - INFO - Total fingers: 0
+2025-05-02 11:59:57,979 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:58,017 - INFO - Total fingers: 0
+2025-05-02 11:59:58,018 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:58,070 - INFO - Total fingers: 0
+2025-05-02 11:59:58,071 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:58,118 - INFO - Total fingers: 0
+2025-05-02 11:59:58,118 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:58,165 - INFO - Total fingers: 0
+2025-05-02 11:59:58,165 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:58,206 - INFO - Total fingers: 0
+2025-05-02 11:59:58,207 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:58,244 - INFO - Total fingers: 0
+2025-05-02 11:59:58,245 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:58,321 - INFO - Total fingers: 0
+2025-05-02 11:59:58,321 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:58,389 - INFO - Total fingers: 0
+2025-05-02 11:59:58,390 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:58,458 - INFO - Total fingers: 0
+2025-05-02 11:59:58,459 - INFO - Displaying image for 0 fingers.
+2025-05-02 11:59:58,516 - INFO - Total fingers: 0
+2025-05-02 11:59:58,517 - INFO - Displaying image for 0 fingers.
+2025-05-02 13:49:36,368 - INFO - finger_counting.py:21 - Initializing video capture...
+2025-05-02 13:49:37,098 - INFO - finger_counting.py:29 - Loading overlay images from folderPath: resources/FingerImages
+2025-05-02 13:49:37,110 - INFO - finger_counting.py:36 - Loaded image: 7.jpg, Shape: (640, 640, 3)
+2025-05-02 13:49:37,119 - INFO - finger_counting.py:36 - Loaded image: 0.jpg, Shape: (640, 640, 3)
+2025-05-02 13:49:37,126 - INFO - finger_counting.py:36 - Loaded image: 6.jpg, Shape: (640, 640, 3)
+2025-05-02 13:49:37,133 - INFO - finger_counting.py:36 - Loaded image: 9.jpg, Shape: (640, 640, 3)
+2025-05-02 13:49:37,136 - INFO - finger_counting.py:36 - Loaded image: 5.jpg, Shape: (640, 640, 3)
+2025-05-02 13:49:37,139 - INFO - finger_counting.py:36 - Loaded image: 8.jpg, Shape: (640, 640, 3)
+2025-05-02 13:49:37,141 - INFO - finger_counting.py:36 - Loaded image: 4.jpg, Shape: (640, 640, 3)
+2025-05-02 13:49:37,143 - INFO - finger_counting.py:36 - Loaded image: 3.jpg, Shape: (640, 640, 3)
+2025-05-02 13:49:37,146 - INFO - finger_counting.py:36 - Loaded image: 2.jpg, Shape: (640, 640, 3)
+2025-05-02 13:49:37,148 - INFO - finger_counting.py:36 - Loaded image: 1.jpg, Shape: (640, 640, 3)
+2025-05-02 13:49:37,148 - INFO - finger_counting.py:38 - Total overlays loaded: 10
+2025-05-02 13:49:37,148 - INFO - finger_counting.py:41 - Initializing hand detector...
+2025-05-02 13:49:37,480 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:37,480 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:37,722 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:37,723 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:37,776 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:37,777 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:37,816 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:37,817 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:37,857 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:37,857 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:37,927 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:37,928 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:37,977 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:37,978 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,022 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,023 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,059 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,060 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,096 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,097 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,133 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,134 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,171 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,171 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,209 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,210 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,246 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,247 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,296 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,297 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,336 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,337 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,375 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,375 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,417 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,418 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,456 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,457 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,497 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,498 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,536 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,536 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,575 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,576 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,624 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,624 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,663 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,663 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,700 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,701 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,737 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,738 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,798 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,799 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,846 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,847 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,891 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,892 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,930 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,930 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:38,976 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:38,977 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,017 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,017 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,081 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,082 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,138 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,138 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,194 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,195 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,239 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,239 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,277 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,278 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,313 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,314 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,349 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,349 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,384 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,385 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,419 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,420 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,454 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,455 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,489 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,490 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,527 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,527 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,564 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,565 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,608 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,609 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,652 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,652 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,711 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,712 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,761 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,761 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,808 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,809 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,853 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,853 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,912 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,913 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:39,975 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:39,976 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,040 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,041 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,092 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,093 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,162 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,163 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,224 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,225 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,272 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,272 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,337 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,338 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,393 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,394 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,448 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,449 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,495 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,496 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,537 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,538 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,610 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,611 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,660 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,661 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,703 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,724 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,788 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,789 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,850 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,851 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,926 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,926 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:40,995 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:40,995 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,058 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,059 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,130 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,131 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,182 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,183 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,227 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,227 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,263 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,263 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,296 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,296 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,331 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,332 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,366 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,367 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,402 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,402 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,436 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,437 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,475 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,476 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,521 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,521 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,561 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:41,562 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:41,669 - INFO - finger_counting.py:82 - Total fingers detected: 5
+2025-05-02 13:49:41,670 - INFO - finger_counting.py:86 - Total fingers: 5
+2025-05-02 13:49:41,670 - INFO - finger_counting.py:91 - Displaying image for 5 fingers.
+2025-05-02 13:49:41,775 - INFO - finger_counting.py:82 - Total fingers detected: 5
+2025-05-02 13:49:41,775 - INFO - finger_counting.py:86 - Total fingers: 5
+2025-05-02 13:49:41,775 - INFO - finger_counting.py:91 - Displaying image for 5 fingers.
+2025-05-02 13:49:41,850 - INFO - finger_counting.py:82 - Total fingers detected: 5
+2025-05-02 13:49:41,850 - INFO - finger_counting.py:86 - Total fingers: 5
+2025-05-02 13:49:41,850 - INFO - finger_counting.py:91 - Displaying image for 5 fingers.
+2025-05-02 13:49:41,982 - INFO - finger_counting.py:82 - Total fingers detected: 5
+2025-05-02 13:49:41,982 - INFO - finger_counting.py:86 - Total fingers: 5
+2025-05-02 13:49:41,983 - INFO - finger_counting.py:91 - Displaying image for 5 fingers.
+2025-05-02 13:49:42,071 - INFO - finger_counting.py:82 - Total fingers detected: 5
+2025-05-02 13:49:42,071 - INFO - finger_counting.py:86 - Total fingers: 5
+2025-05-02 13:49:42,072 - INFO - finger_counting.py:91 - Displaying image for 5 fingers.
+2025-05-02 13:49:42,190 - INFO - finger_counting.py:82 - Total fingers detected: 5
+2025-05-02 13:49:42,190 - INFO - finger_counting.py:86 - Total fingers: 5
+2025-05-02 13:49:42,191 - INFO - finger_counting.py:91 - Displaying image for 5 fingers.
+2025-05-02 13:49:42,286 - INFO - finger_counting.py:82 - Total fingers detected: 5
+2025-05-02 13:49:42,286 - INFO - finger_counting.py:86 - Total fingers: 5
+2025-05-02 13:49:42,287 - INFO - finger_counting.py:91 - Displaying image for 5 fingers.
+2025-05-02 13:49:42,371 - INFO - finger_counting.py:82 - Total fingers detected: 5
+2025-05-02 13:49:42,372 - INFO - finger_counting.py:86 - Total fingers: 5
+2025-05-02 13:49:42,372 - INFO - finger_counting.py:91 - Displaying image for 5 fingers.
+2025-05-02 13:49:42,461 - INFO - finger_counting.py:82 - Total fingers detected: 5
+2025-05-02 13:49:42,461 - INFO - finger_counting.py:86 - Total fingers: 5
+2025-05-02 13:49:42,462 - INFO - finger_counting.py:91 - Displaying image for 5 fingers.
+2025-05-02 13:49:42,633 - INFO - finger_counting.py:82 - Total fingers detected: 5
+2025-05-02 13:49:42,633 - INFO - finger_counting.py:82 - Total fingers detected: 9
+2025-05-02 13:49:42,633 - INFO - finger_counting.py:86 - Total fingers: 9
+2025-05-02 13:49:42,634 - INFO - finger_counting.py:91 - Displaying image for 9 fingers.
+2025-05-02 13:49:42,677 - INFO - finger_counting.py:82 - Total fingers detected: 5
+2025-05-02 13:49:42,677 - INFO - finger_counting.py:86 - Total fingers: 5
+2025-05-02 13:49:42,678 - INFO - finger_counting.py:91 - Displaying image for 5 fingers.
+2025-05-02 13:49:42,773 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:42,774 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:42,821 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:42,822 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:42,862 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:42,863 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:42,906 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:42,907 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:42,982 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:42,983 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,037 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,038 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,089 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,090 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,155 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,156 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,218 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,219 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,284 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,285 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,341 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,342 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,391 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,391 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,438 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,438 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,496 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,497 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,543 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,544 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,590 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,590 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,664 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,664 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,718 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,718 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,763 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,763 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,806 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,807 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,849 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,850 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,892 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,892 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:43,958 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:43,958 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,016 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,017 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,060 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,061 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,104 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,104 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,152 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,153 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,212 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,213 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,265 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,265 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,320 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,321 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,372 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,373 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,420 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,421 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,495 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,496 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,548 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,549 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,622 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,623 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,689 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,690 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,743 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,743 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,787 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,788 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,834 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,835 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,885 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,885 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,927 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,927 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:44,986 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:44,986 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,060 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,060 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,118 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,119 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,174 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,175 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,236 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,237 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,308 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,309 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,382 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,383 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,437 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,438 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,491 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,492 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,553 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,553 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,617 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,617 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,665 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,666 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,735 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,736 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,773 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,773 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,810 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,811 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,851 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,851 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,887 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,887 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,928 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,928 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:45,986 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:45,987 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,038 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,038 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,090 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,091 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,135 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,136 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,180 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,180 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,218 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,219 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,256 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,256 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,294 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,294 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,339 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,339 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,393 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,393 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,443 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,444 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,495 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,496 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,538 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,538 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,584 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,585 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,635 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,636 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,678 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,679 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,717 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,718 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,757 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,758 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,799 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,799 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,841 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,842 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,882 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,883 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,924 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,925 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:46,965 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:46,965 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,005 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,005 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,059 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,059 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,098 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,099 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,138 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,139 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,180 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,180 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,222 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,222 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,263 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,263 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,299 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,299 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,335 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,336 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,374 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,374 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,411 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,411 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,462 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,463 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,516 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,517 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,593 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,593 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,666 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,667 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,726 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,727 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,777 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,777 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,820 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,820 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,885 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,886 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,925 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,926 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:47,996 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:47,996 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,054 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,055 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,104 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,105 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,168 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,168 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,238 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,238 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,299 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,299 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,350 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,351 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,426 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,427 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,506 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,507 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,562 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,563 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,612 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,613 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,690 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,691 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,749 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,750 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,807 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,808 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,853 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,854 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,919 - INFO - finger_counting.py:86 - Total fingers: 0
+2025-05-02 13:49:48,920 - INFO - finger_counting.py:91 - Displaying image for 0 fingers.
+2025-05-02 13:49:48,922 - INFO - finger_counting.py:110 - Quitting application. Releasing resources.

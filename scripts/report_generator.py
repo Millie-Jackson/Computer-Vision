@@ -5,19 +5,29 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+import textwrap
+import logging
 from collections import Counter
 from itertools import groupby
 from matplotlib.backends.backend_pdf import PdfPages
-import os
 from datetime import datetime
-import textwrap
 
 
+
+logging.basicConfig(
+    filename='logs/report_generator.log',
+    filemode='a',
+    format='%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s',
+    level=logging.INFO
+)
 
 sns.set(style="whitegrid")
 
 def load_data(filename="data/game_moves.csv"):
     """Loads data"""
+
+    logging.info(f"Loading data from {filename}")
 
     if not os.path.exists(filename):
         raise FileNotFoundError("No data found")
@@ -27,6 +37,7 @@ def load_data(filename="data/game_moves.csv"):
 def get_outcome_stats(df):
     """Basic stats"""
 
+    logging.info("Calculating outcome stats")
     outcome_counts = df['Result'].value_counts()
 
     return outcome_counts
@@ -34,6 +45,7 @@ def get_outcome_stats(df):
 def win_rate_per_move(df):
     """Win % per move"""
 
+    logging.info("Calculating win rate per move")
     move_win_counts = df[df['Result'] == 'Player Wins']['Player Move'].value_counts()
     move_total_counts = df['Player Move'].value_counts()
     win_rates = (move_win_counts / move_total_counts).fillna(0) * 100
@@ -43,17 +55,20 @@ def win_rate_per_move(df):
 def get_streaks(results):
     """Streak analysis"""
 
+    logging.info("Analyzing streaks")
     return [(key, sum(1 for _ in group)) for key, group in groupby(results)]
 
 def ensure_reports_folder():
     """Ensures reports are placed into a folder"""
 
+    logging.info("Ensuring reports folder exists")
     if not os.path.exists("reports"):
         os.makedirs("reports")
 
 def cleanup_old_charts():
     """Removes out of date charts"""
 
+    logging.info("Cleaning up old charts")
     for fname in ["outcome.png", "winrate.png", "start_end.png"]:
         if os.path.exists(fname):
             os.remove(fname)
@@ -61,6 +76,7 @@ def cleanup_old_charts():
 def plot_outcome_distribution(df, save_path):
     """Plot outcome distributions"""
 
+    logging.info("Plotting outcome distribution")
     plt.figure(figsize=(6, 4))
     outcome_counts = get_outcome_stats(df)
     sns.barplot(x=outcome_counts.index, y=outcome_counts.values, palette="Set2")
@@ -74,6 +90,7 @@ def plot_outcome_distribution(df, save_path):
 def plot_winrate_by_move(df, save_path):
     """Plots win rate per move"""
 
+    logging.info("Plotting win rate per move")
     win_rates = win_rate_per_move(df)
     plt.figure(figsize=(6, 4))
     sns.barplot(x=win_rates.index, y=win_rates.values, palette="coolwarm")
@@ -88,6 +105,7 @@ def plot_winrate_by_move(df, save_path):
 def plot_start_vs_end(df, save_path):
     """Plot start vs end performance"""
 
+    logging.info("Plotting start vs end performance")
     third = len(df) // 3
     start = df.iloc[:third]
     end = df.iloc[-third:]
@@ -112,6 +130,7 @@ def plot_start_vs_end(df, save_path):
 def generate_pdf_report(df, filename="reports/rps_report.pdf"):
     """Generates pdf report"""
 
+    logging.info("Generating PDF report")
     with PdfPages(filename) as pdf:
 
         # 1. Outcomes
@@ -173,11 +192,12 @@ Notes:
         pdf.savefig(fig)
         plt.close()
     
-    print(f"PDF report saved as {filename}")
+    logging.info(f"PDF report saved as {filename}")
 
 def generate_html_report(df, filename="reports/rps_report.html"):
     """Generate html report"""
 
+    logging.info("Generating HTML report")
     outcome_img = "reports/outcome.png"
     winrate_img = "reports/winrate.png"
     startend_img = "reports/start_end.png"
@@ -202,7 +222,7 @@ def generate_html_report(df, filename="reports/rps_report.html"):
     with open(filename, "w") as f:
         f.write(html)
 
-    print(f"HTML report saves as {filename}")
+    logging.info(f"HTML report saves as {filename}")
 
 
 

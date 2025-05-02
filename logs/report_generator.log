@@ -1,0 +1,22 @@
+2025-05-02 12:07:27,768 - INFO - PDF report saved as reports/rps_report.pdf
+2025-05-02 12:07:28,944 - INFO - HTML report saves as reports/rps_report.html
+2025-05-02 13:38:09,608 - INFO - report_generator.py:64 - Ensuring reports folder exists
+2025-05-02 13:38:09,608 - INFO - report_generator.py:71 - Cleaning up old charts
+2025-05-02 13:38:09,608 - INFO - report_generator.py:30 - Loading data from data/game_moves.csv
+2025-05-02 13:38:09,610 - INFO - report_generator.py:133 - Generating PDF report
+2025-05-02 13:38:09,610 - INFO - report_generator.py:79 - Plotting outcome distribution
+2025-05-02 13:38:10,058 - INFO - report_generator.py:40 - Calculating outcome stats
+2025-05-02 13:38:10,628 - INFO - report_generator.py:93 - Plotting win rate per move
+2025-05-02 13:38:10,629 - INFO - report_generator.py:48 - Calculating win rate per move
+2025-05-02 13:38:11,324 - INFO - report_generator.py:108 - Plotting start vs end performance
+2025-05-02 13:38:12,201 - INFO - report_generator.py:40 - Calculating outcome stats
+2025-05-02 13:38:12,202 - INFO - report_generator.py:48 - Calculating win rate per move
+2025-05-02 13:38:12,206 - INFO - report_generator.py:58 - Analyzing streaks
+2025-05-02 13:38:12,366 - INFO - report_generator.py:195 - PDF report saved as reports/rps_report.pdf
+2025-05-02 13:38:12,367 - INFO - report_generator.py:200 - Generating HTML report
+2025-05-02 13:38:12,367 - INFO - report_generator.py:79 - Plotting outcome distribution
+2025-05-02 13:38:12,517 - INFO - report_generator.py:40 - Calculating outcome stats
+2025-05-02 13:38:12,817 - INFO - report_generator.py:93 - Plotting win rate per move
+2025-05-02 13:38:12,817 - INFO - report_generator.py:48 - Calculating win rate per move
+2025-05-02 13:38:13,125 - INFO - report_generator.py:108 - Plotting start vs end performance
+2025-05-02 13:38:13,463 - INFO - report_generator.py:225 - HTML report saves as reports/rps_report.html

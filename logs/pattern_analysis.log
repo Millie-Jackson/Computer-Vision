@@ -1,0 +1,61 @@
+2025-05-02 12:03:46,509 - INFO - 
+ Loaded 4 rounds from data/game_moves.csv
+2025-05-02 12:03:46,509 - INFO - 
+ Move Frequencies:
+2025-05-02 12:03:46,633 - INFO -           Player Move  AI Move
+Paper             1.0        2
+Rock              NaN        1
+Scissors          2.0        1
+2025-05-02 12:03:46,691 - INFO - 
+ Result Streaks (in order):
+2025-05-02 12:03:46,692 - INFO - AI Wins: 1 rounds
+2025-05-02 12:03:46,692 - INFO - Draw: 3 rounds
+2025-05-02 12:03:46,692 - INFO - 
+ Common Move Transitions:
+2025-05-02 12:03:46,692 - INFO - Scissors -> Paper: 1 times
+2025-05-02 12:03:46,692 - INFO - Paper -> Scissors: 1 times
+2025-05-02 12:03:46,692 - INFO - Scissors -> nan: 1 times
+2025-05-02 12:03:46,693 - INFO - 
+ Detected 3-Move Patterns:
+2025-05-02 12:03:46,693 - INFO - 
+ Player Tendencies:
+2025-05-02 12:03:46,693 - INFO - Most common opening move: Scissors
+2025-05-02 12:03:46,693 - INFO - 
+ Player responses to previous round result:
+2025-05-02 12:03:46,694 - INFO - After 'AI Wins', played 'Paper': 1 times
+2025-05-02 12:03:46,694 - INFO - After 'Draw', played 'Scissors': 1 times
+2025-05-02 12:03:46,694 - INFO - After 'Draw', played 'nan': 1 times
+2025-05-02 13:41:49,446 - INFO - pattern_analysis.py:85 - Function: run_full_analysis
+2025-05-02 13:41:49,446 - INFO - pattern_analysis.py:19 - Function: load_game_data
+2025-05-02 13:41:49,448 - INFO - pattern_analysis.py:22 - 
+ Loaded 4 rounds from data/game_moves.csv
+2025-05-02 13:41:49,448 - INFO - pattern_analysis.py:31 - Function: analyze_move_frequencies
+2025-05-02 13:41:49,448 - INFO - pattern_analysis.py:32 - 
+ Move Frequencies:
+2025-05-02 13:41:49,451 - INFO - pattern_analysis.py:33 -           Player Move  AI Move
+Paper             1.0        2
+Rock              NaN        1
+Scissors          2.0        1
+2025-05-02 13:41:49,455 - INFO - pattern_analysis.py:38 - Function: analyze_result_streaks
+2025-05-02 13:41:49,455 - INFO - pattern_analysis.py:40 - 
+ Result Streaks (in order):
+2025-05-02 13:41:49,455 - INFO - pattern_analysis.py:42 - AI Wins: 1 rounds
+2025-05-02 13:41:49,455 - INFO - pattern_analysis.py:42 - Draw: 3 rounds
+2025-05-02 13:41:49,455 - INFO - pattern_analysis.py:47 - Function: analyze_move_transitions
+2025-05-02 13:41:49,455 - INFO - pattern_analysis.py:50 - 
+ Common Move Transitions:
+2025-05-02 13:41:49,455 - INFO - pattern_analysis.py:52 - Scissors -> Paper: 1 times
+2025-05-02 13:41:49,455 - INFO - pattern_analysis.py:52 - Paper -> Scissors: 1 times
+2025-05-02 13:41:49,456 - INFO - pattern_analysis.py:52 - Scissors -> nan: 1 times
+2025-05-02 13:41:49,456 - INFO - pattern_analysis.py:57 - Function: analyze_sequential_patterns with pattern_length=3
+2025-05-02 13:41:49,456 - INFO - pattern_analysis.py:60 - 
+ Detected 3-Move Patterns:
+2025-05-02 13:41:49,456 - INFO - pattern_analysis.py:68 - Function: analyze_player_tendencies
+2025-05-02 13:41:49,456 - INFO - pattern_analysis.py:69 - 
+ Player Tendencies:
+2025-05-02 13:41:49,456 - INFO - pattern_analysis.py:70 - Most common opening move: Scissors
+2025-05-02 13:41:49,456 - INFO - pattern_analysis.py:78 - 
+ Player responses to previous round result:
+2025-05-02 13:41:49,456 - INFO - pattern_analysis.py:80 - After 'AI Wins', played 'Paper': 1 times
+2025-05-02 13:41:49,456 - INFO - pattern_analysis.py:80 - After 'Draw', played 'Scissors': 1 times
+2025-05-02 13:41:49,456 - INFO - pattern_analysis.py:80 - After 'Draw', played 'nan': 1 times

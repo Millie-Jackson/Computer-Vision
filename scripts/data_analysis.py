@@ -2,8 +2,18 @@
 import random
 import csv
 import os
+import logging
 import pandas as pd
 from collections import Counter
+
+
+
+logging.basicConfig(
+    filename='logs/data_analysis.log',
+    filemode='a',
+    format='%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s',
+    level=logging.INFO
+)
 
 # Initialize move history storage
 player_move_history = []
@@ -26,30 +36,33 @@ def determine_winner(player, ai):
 def analyze_move_frequencies():
     """Analyzes how often the player chooses each move."""
 
+    logging.info("Running analyze_move_frequencies()")
     move_counts = Counter(player_move_history)
     total_moves = len(player_move_history)
 
     if total_moves == 0:
         return "No moves played yet."
     
-    print("\n Player Move Frequency:")
+    logging.info("\n Player Move Frequency:")
     for move, count in move_counts.items():
         percentage = (count / total_moves) * 100
-        print(f"{move}: {count} times ({percentage:.1f}%)")
+        logging.info(f"{move}: {count} times ({percentage:.1f}%)")
 
 def dectect_player_move_sequences():
     """Identifies common move transitions"""
 
+    logging.info("Running detect_player_move_sequences)")
     transitions = [(player_move_history[i], player_move_history[i+1]) for i in range(len(player_move_history) - 1)]
     
     transitions_counts = Counter(transitions)
-    print("\n Common Player Move Sequences:")
+    logging.info("\n Common Player Move Sequences:")
     for transition, count in transitions_counts.most_common():
-        print(f"{transition[0]} -> {transition[1]} : {count} times")
+        logging.info(f"{transition[0]} -> {transition[1]} : {count} times")
 
 def predict_next_move(player_move_history):
     """Predicts the player's next move based on history"""
 
+    logging.info("Running predict_next_move()")
     if len(player_move_history) < 2:
         return random.choice(moves) # Not enough data -> choose randomly
     
@@ -71,6 +84,7 @@ def predict_next_move(player_move_history):
 def get_smart_ai_move(player_move_history):
     """AI selects the best move based on predicted player move."""
 
+    logging.info("Running get_smart_ai_move()")
     predicted_player_move = predict_next_move(player_move_history)
 
     # Choose the best counter move
@@ -85,6 +99,7 @@ def get_smart_ai_move(player_move_history):
 def analyze_player_patterns(player_move_history):
     """Analyzes player's decision patterns over time."""
 
+    logging.info("Running analyze_player_patterns()")
     if not player_move_history:
         return "No moves recorded."
     
@@ -108,6 +123,7 @@ def analyze_player_patterns(player_move_history):
 def save_moves_to_csv(player_moves, ai_moves, results, filename="game_moves.csv"):
     """Appends player and AI moves to a CSV file for later analysis"""
 
+    logging.info("Running save_moves_to_csv()")
     # Check if file exists
     file_exists = os.path.isfile(filename)
 
@@ -121,47 +137,50 @@ def save_moves_to_csv(player_moves, ai_moves, results, filename="game_moves.csv"
         for i, (player, ai, result) in enumerate(zip(player_moves, ai_moves, results), start=1):
             writer.writerow([i, player, ai, result])
 
-    print(f"\n Moves appended to {filename} successfully!")
+    logging.info(f"\n Moves appended to {filename} successfully!")
 
 def display_moves_as_dataframe(player_moves, ai_moves):
     """Displays game moves as a Pandas DataFrame"""
 
+    logging.info("Running display_moves_as_dataframe()")
     df = pd.DataFrame({"Round": list(range(1, len(player_moves) + 1)),
                         "Player Move": player_moves,
                         "AI Move": ai_moves})
     
-    print("\n Game Move History:\n")
-    print(df)
+    logging.info("Game Move History:\n%s", df.to_string(index=False))
+
 
     return df # Return for further analysis
 
 def check_dataset_size(filename="game_moves.csv"):
     """Loads the csv and displays how many rounds are recorded"""
 
+    logging.info("Running check_dataset_size()")
     # Check if the file exists
     if not os.path.isfile(filename):
-        print("\n No dataset found.")
+        logging.info("\n No dataset found.")
         return
     
     # Check if the file is empty
     if os.stat(filename).st_size == 0:
-        print("\n The data set is empty.")
+        logging.info("\n The data set is empty.")
         return
 
     try:
         df = pd.read_csv(filename)
-        print(f"\n Total Rounds Recorded: {len(df)}")
+        logging.info(f"\n Total Rounds Recorded: {len(df)}")
     except pd.errors.EmptyDataError:
-        print("\n The Dataset exists but is empty.")
+        logging.info("\n The Dataset exists but is empty.")
 
 def calculate_ai_win_rate(results):
     """Calculates win rate"""
 
+    logging.info("Running calculate_ai_win_rate()")
     total = len(results)
     counts = Counter(results)
     ai_wins = counts.get("AI Wins", 0)
     win_rate = (ai_wins /  total) * 100 if total > 0 else 0
-    print(f"\n AI Win Rate: {win_rate:.1f}% ({ai_wins}/{total} rounds)")
+    logging.info(f"\n AI Win Rate: {win_rate:.1f}% ({ai_wins}/{total} rounds)")
 
 
 
@@ -170,8 +189,7 @@ dectect_player_move_sequences()
 
 # Predict the next move based on history
 predicted_move = predict_next_move(player_move_history)
-print(f"\n AI Predicts Player Will Choose: {predicted_move}")
+logging.info(f"\n AI Predicts Player Will Choose: {predicted_move}")
 ai_smart_move = get_smart_ai_move(player_move_history)
-print(f"AI Chooses: {ai_smart_move} (to counter predicted move)")
-
-print (f"Dataset size: ", player_move_history)
+logging.info(f"AI Chooses: {ai_smart_move} (to counter predicted move)")
+logging.info("Dataset size: %s", player_move_history) 
