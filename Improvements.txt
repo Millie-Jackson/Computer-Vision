@@ -7,3 +7,4 @@
 - Move all the fps display into one function
 - Get finger counter to work with the left hand too (maybe it should be added to the hand tracking module)
 - Hand tacking accepts n number of hands (for multiple people in the room)
+- There are similar things in generate_test_data.py and rock_paper_scissor.py

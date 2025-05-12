@@ -1,3 +1,6 @@
+# scripts/data_analysis.py
+
+
 
 import random
 import csv
@@ -12,6 +15,9 @@ ai_move_history = []
 # Possible moves
 moves = ["Rock", "Paper", "Scissors"]
 
+# Test data or normal data
+#data_file = "data/game_moves.csv"
+data_file = "data/simulated_game_moves_for_testing.csv"
 
 
 def determine_winner(player, ai):
@@ -105,7 +111,7 @@ def analyze_player_patterns(player_move_history):
 
     return "\n".join(analysis_results)
 
-def save_moves_to_csv(player_moves, ai_moves, results, filename="game_moves.csv"):
+def save_moves_to_csv(player_moves, ai_moves, results, filename=data_file):
     """Appends player and AI moves to a CSV file for later analysis"""
 
     # Check if file exists
@@ -120,6 +126,8 @@ def save_moves_to_csv(player_moves, ai_moves, results, filename="game_moves.csv"
 
         for i, (player, ai, result) in enumerate(zip(player_moves, ai_moves, results), start=1):
             writer.writerow([i, player, ai, result])
+    print(f"\n[DEBUG] Writing game data to: {os.path.abspath(filename)}")
+
 
     print(f"\n Moves appended to {filename} successfully!")
 
@@ -135,7 +143,7 @@ def display_moves_as_dataframe(player_moves, ai_moves):
 
     return df # Return for further analysis
 
-def check_dataset_size(filename="game_moves.csv"):
+def check_dataset_size(filename=data_file):
     """Loads the csv and displays how many rounds are recorded"""
 
     # Check if the file exists
@@ -165,13 +173,13 @@ def calculate_ai_win_rate(results):
 
 
 
-analyze_move_frequencies()
-dectect_player_move_sequences()
+if __name__ == "__main__":
 
-# Predict the next move based on history
-predicted_move = predict_next_move(player_move_history)
-print(f"\n AI Predicts Player Will Choose: {predicted_move}")
-ai_smart_move = get_smart_ai_move(player_move_history)
-print(f"AI Chooses: {ai_smart_move} (to counter predicted move)")
+    analyze_move_frequencies()
+    dectect_player_move_sequences()
 
-print (f"Dataset size: ", player_move_history)
+    # Predict the next move based on history
+    predicted_move = predict_next_move(player_move_history)
+    print(f"\n AI Predicts Player Will Choose: {predicted_move}")
+    ai_smart_move = get_smart_ai_move(player_move_history)
+    print(f"AI Chooses: {ai_smart_move} (to counter predicted move)")

@@ -1,4 +1,6 @@
-# Computer-Vision/FingerCounting.py
+# scripts/finger_counting.py
+
+
 
 import cv2
 import time

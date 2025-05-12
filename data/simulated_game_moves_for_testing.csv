@@ -1,0 +1,101 @@
+Round,Player Move,AI Move,Result
+1,Rock,Paper,AI Wins
+2,Paper,Scissors,AI Wins
+3,Scissors,Rock,AI Wins
+4,Rock,Paper,AI Wins
+5,Paper,Scissors,AI Wins
+6,Scissors,Rock,AI Wins
+7,Rock,Paper,AI Wins
+8,Paper,Scissors,AI Wins
+9,Scissors,Rock,AI Wins
+10,Rock,Paper,AI Wins
+11,Paper,Scissors,AI Wins
+12,Scissors,Scissors,Draw
+13,Scissors,Rock,AI Wins
+14,Rock,Rock,Draw
+15,Rock,Paper,AI Wins
+16,Paper,Scissors,AI Wins
+17,Scissors,Rock,AI Wins
+18,Rock,Paper,AI Wins
+19,Paper,Rock,Player Wins
+20,Paper,Paper,Draw
+21,Paper,Scissors,AI Wins
+22,Scissors,Scissors,Draw
+23,Scissors,Rock,AI Wins
+24,Rock,Paper,AI Wins
+25,Paper,Scissors,AI Wins
+26,Scissors,Rock,AI Wins
+27,Rock,Paper,AI Wins
+28,Paper,Scissors,AI Wins
+29,Scissors,Rock,AI Wins
+30,Rock,Paper,AI Wins
+31,Paper,Scissors,AI Wins
+32,Scissors,Rock,AI Wins
+33,Rock,Paper,AI Wins
+34,Paper,Scissors,AI Wins
+35,Scissors,Rock,AI Wins
+36,Rock,Paper,AI Wins
+37,Paper,Scissors,AI Wins
+38,Scissors,Rock,AI Wins
+39,Rock,Paper,AI Wins
+40,Paper,Scissors,AI Wins
+41,Scissors,Rock,AI Wins
+42,Rock,Rock,Draw
+43,Rock,Paper,AI Wins
+44,Paper,Scissors,AI Wins
+45,Scissors,Rock,AI Wins
+46,Rock,Paper,AI Wins
+47,Paper,Scissors,AI Wins
+48,Scissors,Rock,AI Wins
+49,Rock,Rock,Draw
+50,Rock,Paper,AI Wins
+51,Paper,Scissors,AI Wins
+52,Scissors,Rock,AI Wins
+53,Rock,Paper,AI Wins
+54,Paper,Rock,Player Wins
+55,Paper,Paper,Draw
+56,Paper,Scissors,AI Wins
+57,Scissors,Rock,AI Wins
+58,Rock,Paper,AI Wins
+59,Paper,Scissors,AI Wins
+60,Scissors,Rock,AI Wins
+61,Rock,Paper,AI Wins
+62,Paper,Scissors,AI Wins
+63,Scissors,Rock,AI Wins
+64,Rock,Rock,Draw
+65,Rock,Paper,AI Wins
+66,Paper,Scissors,AI Wins
+67,Scissors,Rock,AI Wins
+68,Rock,Paper,AI Wins
+69,Paper,Scissors,AI Wins
+70,Scissors,Rock,AI Wins
+71,Rock,Scissors,Player Wins
+72,Rock,Paper,AI Wins
+73,Paper,Scissors,AI Wins
+74,Scissors,Rock,AI Wins
+75,Rock,Paper,AI Wins
+76,Paper,Scissors,AI Wins
+77,Scissors,Rock,AI Wins
+78,Rock,Paper,AI Wins
+79,Paper,Paper,Draw
+80,Paper,Scissors,AI Wins
+81,Scissors,Rock,AI Wins
+82,Rock,Paper,AI Wins
+83,Paper,Scissors,AI Wins
+84,Scissors,Paper,Player Wins
+85,Scissors,Rock,AI Wins
+86,Rock,Paper,AI Wins
+87,Paper,Scissors,AI Wins
+88,Scissors,Scissors,Draw
+89,Scissors,Rock,AI Wins
+90,Rock,Paper,AI Wins
+91,Paper,Paper,Draw
+92,Paper,Scissors,AI Wins
+93,Scissors,Rock,AI Wins
+94,Rock,Scissors,Player Wins
+95,Rock,Paper,AI Wins
+96,Paper,Scissors,AI Wins
+97,Scissors,Rock,AI Wins
+98,Rock,Paper,AI Wins
+99,Paper,Scissors,AI Wins
+100,Scissors,Rock,AI Wins
